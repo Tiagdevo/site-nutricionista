@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Maynara Azeredo | Nutricionista</title>
     <style>
-        /* --- ESTILOS GERAIS E PALETA DE CORES PREMIUM --- */
+        /* --- PALETA DE CORES AJUSTADA PARA FUNDO ESCURO --- */
         :root {
-            --verde-escuro: #3E5042; /* O verde exato da logo que você pediu! */
-            --verde-medio: #536B58;  /* Um tom médio derivado da logo */
-            --verde-claro: #EBF0EC;   /* Um fundo bem suave baseado no tom da logo */
-            --verde-fundo: #3e5042;   /* Mantém a leitura leve no fundo geral */
-            --dourado: #C5A059;       /* O dourado oficial */
-            --texto-escuro: #2C352E;  /* Texto escuro combinando com o verde */
+            --verde-escuro: #3E5042;  /* O verde exato da logo no fundo */
+            --verde-medio: #536B58;   /* Tom médio para detalhes */
+            --verde-claro: #2A362D;   /* Verde ainda mais escuro para os cards */
+            --verde-fundo: #3E5042;   /* Fundo geral do site */
+            --dourado: #C5A059;       /* Dourado oficial */
+            --texto-claro: #FFFFFF;   /* Texto principal em BRANCO para dar leitura */
+            --texto-suave: #C4D1C7;   /* Texto secundário em verde clarinho */
             --branco: #FFFFFF;
         }
 
@@ -25,7 +26,7 @@
 
         body {
             background-color: var(--verde-fundo);
-            color: var(--texto-escuro);
+            color: var(--texto-claro);
             line-height: 1.6;
         }
 
@@ -35,11 +36,11 @@
             padding: 20px;
         }
 
-        /* --- CABEÇALHO COM A LOGO OFICIAL --- */
+        /* --- CABEÇALHO --- */
         header {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(to bottom, #E8EFEA, var(--verde-fundo));
+            background: linear-gradient(to bottom, #2A362D, var(--verde-fundo));
         }
 
         .logo-container {
@@ -48,7 +49,7 @@
             height: 180px;
             border-radius: 50%;
             border: 3px solid var(--dourado);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             overflow: hidden;
             background-color: var(--verde-escuro);
         }
@@ -61,10 +62,9 @@
         }
 
         .brand-name {
-            font-size: 1.6rem;
-            letter-spacing: 3px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--verde-escuro);
+            color: var(--branco);
             margin-top: 15px;
             font-weight: 600;
             font-family: 'Georgia', serif;
@@ -88,7 +88,7 @@
         .main-title {
             font-size: 2.3rem;
             font-family: 'Georgia', serif;
-            color: var(--verde-escuro);
+            color: var(--branco);
             font-style: italic;
             font-weight: normal;
         }
@@ -103,7 +103,7 @@
 
         .divider::after {
             content: '♥';
-            color: var(--verde-medio);
+            color: var(--dourado);
             position: absolute;
             top: -10px;
             left: 50%;
@@ -114,7 +114,7 @@
 
         .subtitle {
             font-size: 1.1rem;
-            color: var(--verde-medio);
+            color: var(--texto-suave);
             max-width: 600px;
             margin: 15px auto 0;
         }
@@ -128,16 +128,16 @@
         }
 
         .card {
-            background-color: var(--branco);
+            background-color: var(--verde-claro);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--verde-escuro);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-top: 5px solid var(--dourado);
         }
 
         .card.clara {
-            border-top: 5px solid var(--verde-medio);
-            background-color: var(--verde-claro);
+            border-top: 5px solid var(--branco);
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
         .card-header {
@@ -154,7 +154,7 @@
             font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--verde-escuro);
+            color: var(--branco);
             display: inline-block;
             padding-bottom: 5px;
             border-bottom: 2px solid var(--dourado);
@@ -170,6 +170,7 @@
             padding-left: 25px;
             margin-bottom: 12px;
             font-size: 0.95rem;
+            color: var(--texto-suave);
         }
 
         .lista-especialidades li::before {
@@ -182,8 +183,8 @@
 
         /* --- SINALIZAÇÃO AUTISMO --- */
         .autismo-banner {
-            background-color: var(--branco);
-            border: 1px solid var(--verde-claro);
+            background-color: var(--verde-claro);
+            border: 1px solid rgba(197, 160, 89, 0.3);
             border-radius: 50px;
             padding: 15px 30px;
             margin: 40px auto;
@@ -192,21 +193,22 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .autismo-tag {
-            background-color: var(--verde-escuro);
-            color: var(--branco);
+            background-color: var(--dourado);
+            color: var(--verde-claro);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: bold;
         }
 
         .autismo-texto {
-            color: var(--verde-escuro);
+            color: var(--branco);
             font-weight: 600;
         }
 
@@ -220,7 +222,7 @@
         }
 
         .diferencial-item h4 {
-            color: var(--verde-escuro);
+            color: var(--dourado);
             font-size: 1.1rem;
             margin: 10px 0 5px;
             font-weight: 600;
@@ -228,18 +230,18 @@
 
         .diferencial-item p {
             font-size: 0.85rem;
-            color: #666;
+            color: var(--texto-suave);
             padding: 0 10px;
         }
 
         .icon-def {
             font-size: 1.8rem;
-            color: var(--verde-medio);
+            color: var(--dourado);
         }
 
-        /* --- RODAPÉ PREMIUM COM CONTATOS --- */
+        /* --- RODAPÉ --- */
         footer {
-            background-color: var(--verde-escuro);
+            background-color: #2A362D;
             color: var(--branco);
             padding: 10px 20px 40px;
             border-top: 4px solid var(--dourado);
@@ -273,7 +275,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             margin-bottom: 30px;
-            color: var(--verde-claro);
+            color: var(--texto-suave);
         }
 
         .contatos-list {
@@ -291,7 +293,7 @@
         .contatos-list a {
             color: var(--branco);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -303,14 +305,19 @@
         }
 
         .contatos-list a:hover {
-            color: var(--dourado);
+            color: var(--verde-escuro);
             border-color: var(--dourado);
-            background-color: rgba(255, 255, 255, 0.07);
+            background-color: var(--dourado);
+            font-weight: 600;
         }
 
         .contato-icon {
             color: var(--dourado);
             font-size: 1.2rem;
+        }
+
+        .contatos-list a:hover .contato-icon {
+            color: var(--verde-escuro);
         }
 
         .footer-proposito {
@@ -326,7 +333,7 @@
 
         .footer-compromisso {
             font-size: 0.85rem;
-            color: #A3B8AE;
+            color: var(--texto-suave);
             max-width: 400px;
         }
 
@@ -341,9 +348,10 @@
             .main-title {
                 font-size: 1.8rem;
             }
-        .brand-name {
-            font-size: 1.3rem; /* Mudamos de 1.8rem para 1.3rem */
-            letter-spacing: 1px; /* Mudamos de 1.5px para 1px para juntar mais um tiquinho */
+            .brand-name {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
         }
     </style>
 </head>
@@ -463,4 +471,5 @@
     </footer>
 
 </body>
+</html>
 </html>
