@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Maynara Azeredo | Nutricionista</title>
+    <style>
+        /* --- ESTILOS GERAIS E PALETA DE CORES --- */
+        :root {
+            --verde-escuro: #2C4A3E;
+            --verde-medio: #4A6B5D;
+            --verde-claro: #E8EFEA;
+            --verde-fundo: #F4F7F5;
+            --dourado: #C5A059;
+            --texto-escuro: #333333;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--verde-fundo);
+            color: var(--texto-escuro);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- CABEÇALHO (LOGO) --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #E8EFEA, var(--verde-fundo));
+        }
+
+        .logo-area {
+            margin-bottom: 20px;
+        }
+
+        .logo-m {
+            font-size: 70px;
+            font-family: 'Georgia', serif;
+            color: var(--verde-escuro);
+            font-style: italic;
+            border: 2px solid var(--dourado);
+            width: 110px;
+            height: 110px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+
+        .brand-name {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--verde-escuro);
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .brand-sub {
+            font-size: 0.9rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--dourado);
+            margin-top: 5px;
+        }
+
+        /* --- INTRODUÇÃO --- */
+        .intro-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 0 10px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+            color: var(--verde-escuro);
+            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            height: 1px;
+            width: 150px;
+            background-color: var(--dourado);
+            margin: 15px auto;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '♥';
+            color: var(--verde-medio);
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--verde-fundo);
+            padding: 0 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--verde-medio);
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        /* --- SEÇÃO DE ESPECIALIDADES (CARDS) --- */
+        .especialidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--branco);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--verde-escuro);
+        }
+
+        .card.clara {
+            border-top: 5px solid var(--verde-medio);
+            background-color: var(--verde-claro);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--verde-escuro);
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--dourado);
+        }
+
+        .lista-especialidades {
+            list-style: none;
+        }
+
+        .lista-especialidades li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .lista-especialidades li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--dourado);
+            font-weight: bold;
+        }
+
+        /* --- ÁREA AUTISMO --- */
+        .autismo-banner {
+            background-color: var(--branco);
+            border: 1px solid var(--verde-claro);
+            border-radius: 50px;
+            padding: 15px 30px;
+            margin: 40px auto;
+            max-width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .autismo-tag {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .autismo-texto {
+            color: var(--verde-escuro);
+            font-weight: 600;
+        }
+
+        /* --- DIFERENCIAIS --- */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .diferencial-item h4 {
+            color: var(--verde-escuro);
+            font-size: 1.1rem;
+            margin: 10px 0 5px;
+        }
+
+        .diferencial-item p {
+            font-size: 0.85rem;
+            color: #666;
+            padding: 0 10px;
+        }
+
+        .icon-def {
+            font-size: 1.8rem;
+            color: var(--verde-medio);
+        }
+
+        /* --- RODAPÉ COM CONTATOS --- */
+        footer {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 5px 20px 40px;
+            border-top: 4px solid var(--dourado);
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+        }
+
+        .footer-title {
+            color: var(--dourado);
+            font-size: 1.6rem;
+            font-family: 'Georgia', serif;
+            margin-bottom: 5px;
+        }
+
+        .footer-subtitle {
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: var(--verde-claro);
+        }
+
+        .contatos-list {
+            list-style: none;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 30px;
+        }
+
+        .contatos-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contatos-list a {
+            color: var(--branco);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contatos-list a:hover {
+            color: var(--dourado);
+        }
+
+        .contato-icon {
+            color: var(--dourado);
+            font-weight: bold;
+        }
+
+        .footer-proposito {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-proposito span {
+            color: var(--dourado);
+        }
+
+        .footer-compromisso {
+            font-size: 0.85rem;
+            color: #A3B8AE;
+            max-width: 400px;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            .autismo-banner {
+                flex-direction: column;
+                border-radius: 20px;
+                text-align: center;
+                padding: 20px;
+            }
+            .main-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <span class="logo-m">M</span>
+            <h1 class="brand-name">Maynara Azeredo</h1>
+            <p class="brand-sub">Nutricionista</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="intro-section">
+            <h2 class="main-title">Nossas Especialidades</h2>
+            <div class="divider"></div>
+            <p class="subtitle">Atendimento nutricional completo, humanizado e baseado em ciência para todas as fases da vida.</p>
+        </section>
+
+        <section class="especialidades-grid">
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🥗</div>
+                    <h3 class="card-title">Área Clínica</h3>
+                </div>
+                <ul class="lista-especialidades">
+                    <li>Nutrição nas doenças Crônicas não transmissíveis.</li>
+                    <li>Nutrição Esportiva e Treinamento Físico.</li>
+                    <li>Nutrição em Transtornos Alimentares e Obesidade.</li>
+                    <li>Nutrição Clínica e Aspectos Endocrinológicos.</li>
+                    <li>Nutrição Aplicada ao Emagrecimento e Estética.</li>
+                    <li>Nutrição Aplicada à Saúde da Mulher.</li>
+                    <li>Nutrição Neuropsiquiatra.</li>
+                </ul>
+            </div>
+
+            <div class="card clara">
+                <div class="card-header">
+                    <div class="card-icon">🧪</div>
+                    <h3 class="card-title">Terapias & Abordagens</h3>
+                </div>
+                <ul class="lista-especialidades">
+                    <li>Fitoterapia Integrativa.</li>
+                    <li>Manuseio nutricional na Cirurgia Bariátrica.</li>
+                    <li>Intolerância e Alergia Alimentar Infantil e Adulta.</li>
+                    <li>Terapia Nutricional Enteral e Parenteral.</li>
+                    <li>Nutrição em Nefrologia.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="autismo-banner">
+                <span class="autismo-tag">Área Especializada</span>
+                <span class="icon-def">🧩</span>
+                <span class="autismo-texto">Nutrição Aplicada ao Autismo</span>
+            </div>
+        </section>
+
+        <section class="diferenciais-grid">
+            <div class="diferencial-item">
+                <div class="icon-def">👤</div>
+                <h4>Atendimento Personalizado</h4>
+                <p>Atenção individualizada para cada paciente.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="icon-def">📋</div>
+                <h4>Planos Alimentares</h4>
+                <p>Estratégias nutricionais pensadas para você.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="icon-def">🎓</div>
+                <h4>Atualização Científica</h4>
+                <p>Baseado nas melhores evidências científicas.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="icon-def">💝</div>
+                <h4>Cuidado que Transforma</h4>
+                <p>Mais que nutrir, é transformar vidas.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-divider"></div>
+            
+            <h3 class="footer-title">Dra. Maynara Azeredo</h3>
+            <p class="footer-subtitle">Nutricionista</p>
+
+            <ul class="contatos-list">
+                <li>
+                    <a href="https://wa.me/5521980473049" target="_blank">
+                        <span class="contato-icon">📞</span> 21 98047-3049
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/nutrimayazeredo" target="_blank">
+                        <span class="contato-icon">📸</span> @nutrimayazeredo
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:nutrimayazeredo@gmail.com">
+                        <span class="contato-icon">✉</span> nutrimayazeredo@gmail.com
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer-proposito">Seu bem-estar é nosso <span>propósito!</span></p>
+            <p class="footer-compromisso">Nutrição é ciência. Cuidado é escolha. Transformação é nosso compromisso.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
